@@ -53,16 +53,16 @@ public class LeadService {
         user.setFirstname(lead.getFirstname());
         user.setLastname(lead.getLastname());
         user.setAddress(lead.getAddress());
-        user.setCity(lead.getCity());
+        user.setCity(lead.getCity());        user.setEmail(lead.getEmail());
+
+
         user.setZipCode(lead.getZipCode());
         user.setState(city);  // Resolved state
         user.setCourt("Default Court");
         user.setPhoneNumber(lead.getPhoneNumber());
-        user.setEmail(lead.getEmail());
-
         User savedUser = userRepository.save(user);
         lead.setUser(savedUser);
-        leadRepository.insert(lead);
+        leadRepository.save(lead);;
 
         return UserResponse.toUserResponse(savedUser);
     }

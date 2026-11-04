@@ -9,7 +9,7 @@ import so.fine.codingchallenge.db.repository.user.UserRepository;
 import so.fine.codingchallenge.domain.deal.DealRequest;
 import so.fine.codingchallenge.domain.deal.DealResponse;
 
-import java.List;
+import java.util.List;
 
 @Service
 public class DealService {
